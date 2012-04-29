@@ -18,4 +18,4 @@ Notes:
 
 3. thanks to the lazy nature of haskell, the tree structure used for searching is only generated as far as is needed to solve the puzzle. So despite the tree being set to geenrate to 10 generations, if the puzzle can be solved in 3 then only 3 generations will be run.
 
-4. This solution searches breadth first, this keeps of from incurring more tree generations than needed to solve the puzzle.
+4. This solution searches breadth first, this keeps it from incurring more tree generations than needed to solve the puzzle.
