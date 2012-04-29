@@ -1,0 +1,21 @@
+Word Ladder
+==============
+
+A Word Ladder (also known as a doublets, word-links, or Word golf) is a word game invented by Lewis Carroll. A word ladder puzzle begins with two words, and to solve the puzzle one must find a chain of other words to link the two, where at each step the words differ by altering a single letter.
+http://en.wikipedia.org/wiki/Word_ladder
+
+Build this project
+$ ghc --make word_ladder.hs
+
+run it
+$ ./word_ladder cute book
+"cute->cure->core->cork->cook->book"
+
+Notes:
+1. Right now the search is limited to 10 generations. Since search time grows exponentially with each generation you really wouldn't want it going any further than that anyway.
+
+2. If the first word cannot be morphed to the second within the limit, or the dictionary does not contain the second word, an exception will be printed to the screen.
+
+3. thanks to the lazy nature of haskell, the tree structure used for searching is only generated as far as is needed to solve the puzzle. So despite the tree being set to geenrate to 10 generations, if the puzzle can be solved in 3 then only 3 generations will be run.
+
+4. This solution searches breadth first, this keeps of from incurring more tree generations than needed to solve the puzzle.
